@@ -11,7 +11,7 @@ resource "null_resource" "networking_submodule" {
 module "network" {
   depends_on = [null_resource.networking_submodule] # Ensure the submodule is initialized first
   source     = "./modules/example-module"
-  name = var.name
+ // name = var.name
 }
 
 output "vpc_id" {
